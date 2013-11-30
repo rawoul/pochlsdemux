@@ -1,0 +1,10 @@
+* make play/stop/play work
+* only update playlist and download segments for streams actually rendered
+* handle stream switching based on download rate
+* properly schedule playlist update
+* send EXT-X-MAP before TS segment
+* parse ID3 tag for each ES audio segment
+* use timestamp embedded in ID3 tag
+* instantiate ts demux in bin to send proper tags after source pads
+* use I-frame only playlist for fast forward/rewind
+* handle AES-SAMPLE crypt method

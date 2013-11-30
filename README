@@ -1,0 +1,12 @@
+HLS demux proof of concept:
+
+ - exposes renditions as pads
+ - does not queue complete fragments, so it starts playing very quickly
+
+A lot of features are missing, the most important ones being proper playlist
+update scheduling, automatic stream switching based on the download rate. Also
+right now _all_ renditions will be downloaded when the demuxer is used in a
+decodebin, since there is no stream selection API.
+
+The gsturidownloader.[ch] files are modified versions of the ones in
+gst-plugins-bad.
